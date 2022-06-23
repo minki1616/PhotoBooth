@@ -1,5 +1,6 @@
 package util;
 
+import java.security.InvalidParameterException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
@@ -17,13 +18,16 @@ public class PictureMap {
     }
 
     public Picture getPicture(String pictureID){
+        Picture picture = null;
         try{
-            return pictureMap.get(pictureID);
+            picture = pictureMap.get(pictureID);
+            if(picture == null)
+                throw new InvalidParameterException("Invalid pictureID");
         }
         catch(Exception e){
             Logging.logger.log(Level.INFO, "Error while getting user - " +pictureID +e);
             e.printStackTrace();
         }
-        return null;
+        return picture;
     }
 }

@@ -15,7 +15,7 @@ public class Driver {
         Handler handler = new Handler(pictureMap, userMap);
 
         User user1 = handler.registerUser("user1");
-        Picture picture1 = handler.postPicture("user1", "image");
+        Picture picture1 = handler.postPicture("user1", "image1");
         picture1.addLike("user1");
 
         Map<String, Picture> map =  pictureMap.getPictureMap();
