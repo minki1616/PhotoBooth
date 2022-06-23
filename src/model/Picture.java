@@ -7,7 +7,6 @@ import model.Like;
 public class Picture {
     private final  String image;
     private final String userID;
-
     private List<Like> likes = new ArrayList<>();
 
     public Picture(String image, String userID){
