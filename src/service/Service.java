@@ -1,4 +1,4 @@
-package handler;
+package service;
 
 import static util.Logging.logger;
 import java.util.logging.Level;
@@ -7,11 +7,11 @@ import model.User;
 import util.PictureMap;
 import util.UserMap;
 
-public class Handler {
+public class Service {
     private final PictureMap pictureMap;
     private final UserMap userMap;
 
-    public Handler( PictureMap pictureMap, UserMap userMap) {
+    public Service( PictureMap pictureMap, UserMap userMap) {
         this.pictureMap=pictureMap;
         this.userMap=userMap;
     }
